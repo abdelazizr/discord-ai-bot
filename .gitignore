@@ -1,0 +1,5 @@
+# Local
+.envrc
+.DS_Store
+.idea
+.env
