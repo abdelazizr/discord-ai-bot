@@ -1,5 +1,9 @@
 import discord
 import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 intents = discord.Intents.default()
 intents.messages = True
@@ -25,5 +29,4 @@ async def on_message(message):
     elif message.content.startswith('!bye'):
         await message.channel.send('Goodbye!')
 
-# Replace 'your_token_here' with your bot's actual token
-client.run('MTIzMzQxNjY5NDQyNTQ1MjU1NA.G9OzTw.nK1LE2nY1lckjgk_KilZp0MmMBWNJAIzIFPFXw')
+client.run(os.environ["DISCORD_TOKEN"])
