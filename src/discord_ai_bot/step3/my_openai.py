@@ -35,4 +35,3 @@ def generate_summary(articles):
   )
 
   return response.choices[0].message.content
-  

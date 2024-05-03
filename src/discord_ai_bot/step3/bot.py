@@ -44,22 +44,22 @@ async def choose_article(ctx):
     except Exception as e:
         await ctx.send('No valid input received or timeout reached. Please try again.')
 
-# @bot.command(help="Sends a welcome message with useful resources.")
-# async def new_member(ctx):
-#     articles = db["articles"]
-#     most_recent_article_key = list(articles.keys())[-1]  # Getting the most recent article key
-#     most_recent_article_url = articles[most_recent_article_key]  # Getting the URL
+@bot.command(help="Sends a welcome message with useful resources.")
+async def new_member(ctx):
+    articles = db["articles"]
+    most_recent_article_key = list(articles.keys())[-1]  # Getting the most recent article key
+    most_recent_article_url = articles[most_recent_article_key]  # Getting the URL
 
-#     # Welcome message and resources
-#     welcome_message = (
-#         f"Welcome to the server, {ctx.author.mention}! 🎉 Here are some resources you might find helpful:\n"
-#         f"1. Check out our latest article: {most_recent_article_url}\n"
-#         f"2. Visit our Ubuntu Hive website for more insights: https://dev.ubuntuhive.tech/en-us/\n"
-#         f"3. Learn more about tech with this comprehensive tutorial: [Insert Your Tutorial Link Here]\n"
-#         f"4. Other misc resources and info: [Insert More Links or Info Here]\n"
-#     )
+    # Welcome message and resources
+    welcome_message = (
+        f"Welcome to the server, {ctx.author.mention}! 🎉 Here are some resources you might find helpful:\n"
+        f"1. Check out our latest article: {most_recent_article_url}\n"
+        f"2. Visit our Ubuntu Hive website for more insights: https://dev.ubuntuhive.tech/en-us/\n"
+        f"3. Learn more about tech with this comprehensive tutorial: [Insert Your Tutorial Link Here]\n"
+        f"4. Other misc resources and info: [Insert More Links or Info Here]\n"
+    )
 
-#     await ctx.send(welcome_message)
+    await ctx.send(welcome_message)
 
 # Run the bot
 token = os.getenv("DISCORD_TOKEN")
